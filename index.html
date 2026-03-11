@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faredun Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .portfolio-card {
+      width: 100%;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      font-weight: bold;
+      margin: 0 auto 20px;
+      color: #0f172a;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .age {
+      font-size: 18px;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #e2e8f0;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .content-box {
+      display: none;
+      background: rgba(255,255,255,0.06);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .content-box h2 {
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    .content-box ul {
+      padding-left: 20px;
+    }
+
+    .content-box li {
+      margin-bottom: 10px;
+      color: #f1f5f9;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portfolio-card">
+    <div class="profile-img">F</div>
+
+    <h1>Faredun</h1>
+    <div class="age">Age: 18</div>
+
+    <div class="about">
+      I am a beginner web developer who is learning HTML, CSS, and JavaScript.
+      I enjoy creating websites and improving my programming skills.
+    </div>
+
+    <div class="buttons">
+      <button onclick="showSection('skills')">Skills</button>
+      <button onclick="showSection('projects')">Projects</button>
+    </div>
+
+    <div id="skills" class="content-box">
+      <h2>My Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>GitHub</li>
+      </ul>
+    </div>
+
+    <div id="projects" class="content-box">
+      <h2>My Projects</h2>
+      <ul>
+        <li>Portfolio Website</li>
+        <li>Login Form</li>
+        <li>Simple Landing Page</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const skills = document.getElementById("skills");
+      const projects = document.getElementById("projects");
+
+      skills.classList.remove("show");
+      projects.classList.remove("show");
+
+      document.getElementById(sectionId).classList.add("show");
+    }
+  </script>
+
+</body>
+</html>
